@@ -7,7 +7,7 @@ function genBoard() {
         DL:["1,4","1,12", "3,7", "3,9", "4,1", "4,8", "4,15", "7,3","7,7","7,9", "7,13", "8,4", "8,12", "9,3", "9,7", "9,9", "9,13", "12,1", "12,8", "12,15","13,7","13,9", "15,4", "15,12"]
     }
 
-}
+
 
   for (let r = 1; r < 16; r++) {
     const row = document.createElement("div");
@@ -48,26 +48,8 @@ function genBoard() {
     }
     board.appendChild(row);
   }
-
-window.onload = genBoard;
-    // Loop to generate rows and columns
-  for (let r = 1; r < 16; r++) {
-    const row = document.createElement("div");
-    row.style.display = "flex";
-    
-    for (let c = 1; c < 16; c++) {
-      const col = document.createElement("div");
-      let tileName = document.createElement("p");
-      tileName.style.color = "black";
-      col.appendChild(tileName);
-
-      // Apply special tile colors and labels
-      if (specialTiles.dws.includes(`${r},${c}`)) {
-        col.style.backgroundColor = "orange";
-        tileName.textContent = "DW";
-      }
-    }
 }
+window.onload = genBoard;
 
 
 
