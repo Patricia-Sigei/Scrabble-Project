@@ -68,6 +68,3 @@ window.onload = genBoard;
       }
     }
 }
-
-
-
