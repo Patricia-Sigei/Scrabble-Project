@@ -6,6 +6,9 @@ function genBoard() {
         TL:["2,6", "2,10", "6,2", "6,6", "6,10", "6,14", "10,2", "10,6", "10,10", "10,14", "14,6", "14,10"],
         DL:["1,4","1,12", "3,7", "3,9", "4,1", "4,8", "4,15", "7,3","7,7","7,9", "7,13", "8,4", "8,12", "9,3", "9,7", "9,9", "9,13", "12,1", "12,8", "12,15","13,7","13,9", "15,4", "15,12"]
     }
+
+}
+
   for (let r = 1; r < 16; r++) {
     const row = document.createElement("div");
     row.style.display = "flex";
@@ -45,7 +48,7 @@ function genBoard() {
     }
     board.appendChild(row);
   }
-}
+
 window.onload = genBoard;
     // Loop to generate rows and columns
   for (let r = 1; r < 16; r++) {
@@ -65,5 +68,6 @@ window.onload = genBoard;
       }
     }
 }
-}
+
+
 
