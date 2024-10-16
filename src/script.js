@@ -47,3 +47,23 @@ function genBoard() {
   }
 }
 window.onload = genBoard;
+    // Loop to generate rows and columns
+  for (let r = 1; r < 16; r++) {
+    const row = document.createElement("div");
+    row.style.display = "flex";
+    
+    for (let c = 1; c < 16; c++) {
+      const col = document.createElement("div");
+      let tileName = document.createElement("p");
+      tileName.style.color = "black";
+      col.appendChild(tileName);
+
+      // Apply special tile colors and labels
+      if (specialTiles.dws.includes(`${r},${c}`)) {
+        col.style.backgroundColor = "orange";
+        tileName.textContent = "DW";
+      }
+    }
+}
+}
+
