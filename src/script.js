@@ -19,6 +19,7 @@ function genBoard() {
         tileName.textContent="DW";
     
       }
+      
       else if (specialTiles.TW.includes(`${r},${c}`)) {
         col.style.backgroundColor = "red";
         tileName.textContent="TW";
