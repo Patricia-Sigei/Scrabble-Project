@@ -65,170 +65,48 @@
             }
         }
 
-        // function to create a rack of letters in the gameplay container
-        function wordRack() {
-            const rackContainer = document.createElement("div");
-            
-            // Styling the rack to make it visible
-            rackContainer.style.display = "flex";
-            rackContainer.style.marginTop = "20px";
-            rackContainer.style.justifyContent = "center"; 
-            rackContainer.style.padding = "10px";
-            rackContainer.style.border = "2px solid black"; 
-            rackContainer.style.backgroundColor = "#f8f8f8"; 
-            rackContainer.style.borderRadius = "5px";
-            rackContainer.style.width = "fit-content";
-            
-            for (let i = 0; i < predefinedLetters.length; i++) {
-                const tile = document.createElement("div");
-                tile.style.width = "40px";
-                tile.style.height = "40px";
-                tile.style.border = "1px solid lightgray";
-                tile.style.display = "flex";
-                tile.style.justifyContent = "center";
-                tile.style.alignItems = "center";
-                tile.style.position = "relative";
-                tile.style.backgroundColor = "beige";
-                tile.style.marginRight = "5px";
-                // Different IDs for CAT and DARE tiles
-                tile.id = i < 3 ? `tile-cat-${i}` : `tile-dare-${i - 3}`;
 
-                const randomLetter = predefinedLetters[i];
-                const letterValue = letters[randomLetter];
+// Function to create a rack of letters
+function wordRack() {
+    // Creates a container for the rack (a row of letter tiles)
+    const row = document.createElement("div");
+    row.style.display = "flex"; 
 
-                const letterSpan = document.createElement("span");
-                letterSpan.textContent = randomLetter;
-                letterSpan.style.fontSize = "20px";
-                letterSpan.style.color = "black";
+    // Loop to create a tile for each letter
+    for (let l = 0; l< letters.length; l++) {
+        // Creates a div for each tile
+        const rack = document.createElement("div");
+        // Styles the tile
+        rack.style.width = "50px";
+        rack.style.height = "50px";
+        rack.style.backgroundColor = "#654321";
+        rack.style.margin = "5px";
+        rack.style.display = "flex"; 
+        rack.style.justifyContent = "center";
+        rack.style.alignItems = "center";
+        rack.style.borderRadius = "40%"
 
-                const valueSpan = document.createElement("span");
-                valueSpan.textContent = letterValue;
-                valueSpan.style.fontSize = "12px";
-                valueSpan.style.color = "black";
-                valueSpan.style.position = "absolute";
-                valueSpan.style.bottom = "2px";
-                valueSpan.style.right = "2px";
+        // Creates the letter element and style it
+        let rackLetter = document.createElement("p");
+        rackLetter.textContent = letters[l];
+        rackLetter.style.color = "white";
 
-                tile.appendChild(letterSpan);
-                tile.appendChild(valueSpan);
-                rackContainer.appendChild(tile);
-            }
+        // Appends the letter to the rack 
+        rack.appendChild(rackLetter);
 
-            boardContainer.appendChild(rackContainer);
-        }
+        // Append the rack to the row
+        row.appendChild(rack);
+    }
 
-        // function to animate the word "CAT" being placed on the board
-        function animateWordToBoard() {
-            const catLetters = ["C", "A", "T"];
-            const rackTiles = [];
-            
-            catLetters.forEach((_, index) => {
-                rackTiles.push(document.getElementById(`tile-cat-${index}`));
-            });
+    // append the row of tiles to the gameplay container
+    gameplay.appendChild(row);
+}
 
-            let step = 0;
+// Call the functions to generate the board and the rack
+window.onload = function() {
+    genBoard(boardContainer);
+    genBoard(gameplayContainer);  
+    wordRack();  
+}
 
-            function moveToBoard() {
-                if (step < 3) {
-                    const letter = catLetters[step];
-                    const row = 8;
-                    const col = 8 + step; // moves letters across columns (8, 9, 10)
-                    const boardTile = document.getElementById(`${row},${col}`);
-                    const tile = rackTiles[step];
-
-                    // create animation
-                    const tileRect = tile.getBoundingClientRect();
-                    const boardTileRect = boardTile.getBoundingClientRect();
-                    const deltaX = boardTileRect.left - tileRect.left;
-                    const deltaY = boardTileRect.top - tileRect.top;
-
-                    tile.style.transition = "transform 1s";
-                    tile.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-
-                    if (boardTile.style.backgroundColor === "orange" || boardTile.style.backgroundColor === "red") {
-                        boardTile.style.backgroundColor = "white";
-                        boardTile.firstChild.textContent = "";
-                    }
-
-                    setTimeout(() => {
-                        tile.style.transition = "";
-                        tile.style.transform = "";
-                        boardTile.appendChild(tile);
-
-                        step++;
-                        setTimeout(moveToBoard, 1000); // delay for the next move
-                    }, 1000);
-                }
-            }
-
-            moveToBoard();
-        }
-
-        // function to animate the word "DARE" being placed vertically on the board
-        function animateWordDAREToBoard() {
-            const dareLetters = ["D","A" ,"R", "E"];
-            const rackTiles = [];
-            
-            dareLetters.forEach((_, index) => {
-                rackTiles.push(document.getElementById(`tile-dare-${index}`));
-            });
-
-            let step = 0;
-
-            function moveToBoard() {
-                if (step < 5) {
-                    const letter = dareLetters[step];
-                    const row = 7 + step; // moves letters vertically starting from row 8
-                    if (row === 8) {
-                        step++;
-                        setTimeout(moveToBoard, 1000); // delay for the next move
-                        return;
-                    }       
-                     const col = 9; // A is in column 9 (same as 'A' in CAT)
-                    const boardTile = document.getElementById(`${row},${col}`);
-                    const tile = rackTiles[step];
-
-                    // create animation
-                    const tileRect = tile.getBoundingClientRect();
-                    const boardTileRect = boardTile.getBoundingClientRect();
-                    const deltaX = boardTileRect.left - tileRect.left;
-                    const deltaY = boardTileRect.top - tileRect.top;
-
-                    tile.style.transition = "transform 1s";
-                    tile.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-
-                    if (boardTile.style.backgroundColor === "lightblue") {
-                        boardTile.style.backgroundColor = "white";
-                        boardTile.firstChild.textContent = "";
-                    }
-
-                    setTimeout(() => {
-                        tile.style.transition = "";
-                        tile.style.transform = "";
-                        boardTile.appendChild(tile);
-
-                        step++;
-                        setTimeout(moveToBoard, 1000); // delay for the next move
-                    }, 1000);
-                }
-            }
-
-            moveToBoard();
-        }
-
-        // function to remove played letters from rack
-        function removePlayedLettersFromRack(letters) {
-            letters.forEach((letter, index) => {
-                const tile = document.getElementById(`tile-dare-${index}`);
-                if (tile) tile.remove();
-            });
-        }
-
-        // Generate board and rack
-        genBoard(boardContainer);
-        wordRack();
-
-        // Animate the word "CAT" first, then animate "DARE"
-        animateWordToBoard();
-        setTimeout(animateWordDAREToBoard, 4000); // 4-second delay before animating "DARE"
-
+// function to move the letters from the rack to the board.
