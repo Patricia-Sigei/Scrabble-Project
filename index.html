@@ -3,46 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrabble Game</title>
+    <title>Scrabble Game - Instructions</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-    <div id="Introduction">
-        <h1>Scrabble Board Game</h1>
-        <h2>Overview</h2>
-        <p>Scrabble is a word game where players use lettered tiles to form words on a 15x15 board. Each letter has a point value, and players earn points based on the words they create. Some tiles on the board offer special bonuses, such as double or triple letter and word scores. Players take turns forming words horizontally or vertically, and the game ends when all tiles are used or no more valid moves can be made. The player with the highest score wins.</p>
-    </div>
-    
 
-    <div id="board">
-        <h2>Overview of the Board</h2>
+<div class="container">
+    <h1>Scrabble Board Game - Comprehensive Guide</h1>
+    <h2>Overview</h2>
+    <div class="section">
+        <p>Scrabble is a popular word game where players use letter tiles to form words on a 15x15 board. Each letter has a specific point value, and players score points based on the words they create and the bonus squares they cover. The game ends when all tiles are used or no valid moves can be made. The player with the highest score wins.</p>
+    </div>
 
-    </div>
-    <div id="Rules">
-        <h2>Game Rules</h2>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </div>
-    <div id="Step2">
-        <h2>How to Play</h2>
+    <div class="container">
+        <h3>Scrabble Tutorial - Learn by Playing</h3>
 
-    </div>
-    <div id="score"> 
-        <h2>Score Points</h2>
-        <ol>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ol>
+        <div id="message" class="message">Welcome to Scrabble! Start by moving a tile from your rack.</div>
 
+        <!-- Scrabble Board -->
+        <div id="board" class="board"></div>
+
+        <div id="gameplayContainer" class="gameplay"></div>
+
+        <!-- Human Player's Rack -->
+        <div>
+            <h2>Your Rack</h2>
+            <div id="humanRack" class="rack"></div>
+        </div>
+
+        <!-- Computer Player's Rack -->
+        <div>
+            <h2>Computer's Rack</h2>
+            <div id="computerRack" class="rack"></div>
+
+    <!-- Game Instructions -->
+    <h2>Game Instructions</h2>
+    <div class="section">
+        <button class="collapsible">1. Game Setup</button>
+        <div class="content">
+            <ol>
+                <li>Each player draws tiles to determine who goes first.</li>
+                <li>Each player starts with 7 letter tiles on their rack.</li>
+                <li>The game board is a 15x15 grid with special bonus squares.</li>
+                <li>Agree on a dictionary to resolve challenges.</li>
+            </ol>
+        </div>
+
+        <button class="collapsible">2. Starting the Game</button>
+        <div class="content">
+            <p>The first player must place a word using the center square, which is marked with a star. Words must be at least two letters long.</p>
+            <div class="example">
+                Example: If the first player plays the word "CAT", the letter "A" must be on the center star.
+            </div>
+        </div>
+
+        <button class="collapsible">3. Taking Turns</button>
+        <div class="content">
+            <p>Players take turns forming words horizontally or vertically. Each word must connect to an existing word.</p>
+            <div class="example">
+                Example: If "CAT" is already on the board, you can add "S" to form "CATS".
+            </div>
+        </div>
+
+        <button class="collapsible">4. Drawing Tiles</button>
+        <div class="content">
+            <p>After each turn, players draw tiles from the tile bag to ensure they have 7 tiles. If no tiles remain, continue playing with the remaining tiles.</p>
+        </div>
+
+        <button class="collapsible">5. Scoring System</button>
+        <div class="content">
+            <p>Players earn points by adding the values of each letter in their word, plus any bonuses from premium squares.</p>
+            <div class="example">
+                Example: If you place "DOG" with "D" on a double-letter score (DL) and "O" on a triple-word score (TW):
+                <ul>
+                    <li>D (2 points) becomes 4 points (double-letter score).</li>
+                    <li>O (1 point), G (2 points), total = 4 + 1 + 2 = 7 points.</li>
+                    <li>The word score is tripled: 7 x 3 = 21 points.</li>
+                </ul>
+            </div>
+        </div>
     </div>
-    <script src='src/script.js'></script>
+
+    <!-- Game Rules -->
+    <h2>Game Rules</h2>
+    <div class="section">
+        <button class="collapsible">Key Rules of Scrabble</button>
+        <div class="content">
+            <ul>
+                <li>All words must be horizontal or vertical. Diagonal words are not allowed.</li>
+                <li>Words must connect with existing words on the board.</li>
+                <li>Proper nouns, abbreviations, and prefixes or suffixes are not allowed.</li>
+                <li>Challenged words are checked in the agreed-upon dictionary.</li>
+            </ul>
+        </div>
+
+        <button class="collapsible">Challenging Words</button>
+        <div class="content">
+            <p>If a player believes an opponent's word is invalid, they can challenge it. If the word is valid, the challenger loses their turn. If not, the player must remove the word and lose their turn.</p>
+        </div>
+    </div>
+
+    <!-- Scoring -->
+    <h2>How to Score Points</h2>
+    <div class="section">
+        <button class="collapsible">Basic Scoring</button>
+        <div class="content">
+            <p>Each letter has a specific point value:</p>
+            <ul>
+                <li>1 point: E, A, I, O, N, R, T, L, S, U</li>
+                <li>2 points: D, G</li>
+                <li>3 points: B, C, M, P</li>
+                <li>4 points: F, H, V, W, Y</li>
+                <li>5 points: K</li>
+                <li>8 points: J, X</li>
+                <li>10 points: Q, Z</li>
+            </ul>
+        </div>
+
+        <button class="collapsible">Using Premium Squares</button>
+        <div class="content">
+            <p>Scrabble boards feature special squares that can double or triple the value of letters or words:</p>
+            <ul>
+                <li><strong>Double Letter Score (DL):</strong> Doubles the point value of the letter.</li>
+                <li><strong>Triple Letter Score (TL):</strong> Triples the point value of the letter.</li>
+                <li><strong>Double Word Score (DW):</strong> Doubles the total word score.</li>
+                <li><strong>Triple Word Score (TW):</strong> Triples the total word score.</li>
+            </ul>
+            <div class="example">
+                Example: If you place the letter "C" (3 points) on a DW square and the total score for "CAT" is 5 points, your final score will be 5 * 2 = 10 points.
+            </div>
+        </div>
+
+        <button class="collapsible">Bingo Bonus</button>
+        <div class="content">
+            <p>If a player uses all 7 tiles in one turn, they receive a 50-point bonus, called a "bingo".</p>
+        </div>
+    </div>
+    <script src="src/script.js"></script>
 </body>
 </html>
