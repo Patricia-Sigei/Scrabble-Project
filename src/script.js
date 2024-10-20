@@ -11,6 +11,8 @@ const predefinedLetters = ['C', 'A', 'T', 'H', 'E', 'D', 'R'];
 
 // Function to generate the board inside gameplay container
 function genBoard(container) {
+
+
     let specialTiles = {
         TW: ["1,1", "1,8", "1,15", "8,1", "8,15", "15,1", "15,8", "15,15"],
         DW: ["2,2", "2,14", "3,3", "3,13", "4,4", "4,12", "5,5", "5,11", "8,8", "11,5", "11,11", "12,4", "12,12", "13,3", "13,13", "14,2", "14,14"],
@@ -21,7 +23,8 @@ function genBoard(container) {
     for (let r = 1; r < 16; r++) {
         const row = document.createElement("div");
         row.style.display = "flex";
-        for (let c = 1; c < 16; c++) {
+        for (let c = 1; c < 16; c++){
+
             const col = document.createElement("div");
             let tileName = document.createElement("p");
             tileName.style.color = "black";
@@ -106,6 +109,7 @@ function wordRack() {
         valueSpan.style.position = "absolute";
         valueSpan.style.bottom = "2px";
         valueSpan.style.right = "2px";
+
 
         tile.appendChild(letterSpan);
         tile.appendChild(valueSpan);
@@ -218,4 +222,3 @@ function initGame() {
 
 // Run the game initialization
 initGame();
-
