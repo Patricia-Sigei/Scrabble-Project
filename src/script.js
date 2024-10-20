@@ -41,7 +41,7 @@ function genBoard(container) {
             col.style.width = "40px";
             col.style.height = "30px";
             col.style.display = "flex";
-            col.style.border = "1px solid lightgray";
+            col.style.border = "1px solid lightgrey";
             col.style.justifyContent = "center";
             col.style.alignItems = "center";
 

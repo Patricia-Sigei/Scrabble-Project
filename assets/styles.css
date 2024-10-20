@@ -41,7 +41,7 @@ h1, h2 {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(29, 85, 66, 0.1);
 }
 
 .collapsible {
@@ -65,7 +65,7 @@ h1, h2 {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: lightgray;
+    background-color: rgba(111, 136, 23, 0.884);
     border-radius: 5px;
     margin-top: 10px;
 }
