@@ -1,0 +1,194 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #34495e;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+}
+
+#Introduction {
+    background-color: #e7f9ff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#board {
+    border: 2px solid #2c3e50;
+    border-radius: 5px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#instructions {
+    background-color: #d1ecf1;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#rules {
+    background-color: #fff3cd;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#gameplay {
+    background-color: #e2e3e5;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#score {
+    background-color: #d4edda;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+#instructions-rules {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+
+#instructions, #rules {
+    flex: 1;
+    min-width: 300px; 
+    margin: 10px; 
+    padding: 20px;
+}
+
+
+#instructions {
+    background-color: #d1ecf1;
+}
+
+
+#rules {
+    background-color: #fff3cd;
+}
+
+
+ol, ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2, h3 {
+        font-size: 20px;
+    }
+
+    div {
+        padding: 15px;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+#introduction {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+#board {
+    background-color :#e9e9e9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+.instructions-container {
+    display: flex; 
+    gap: 20px; 
+}
+
+
+#instructions, #rules {
+    flex: 1; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+#gameplay {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+#score {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+
+h1 {
+    color: #2980b9;
+}
+
+h2 {
+    color: #34495e;
+}
+
+h3 {
+    color: #2ecc71;
+}
+
+
+ol {
+    margin-left: 20px;
+}
+
+ul {
+    margin-left: 20px;
+}
