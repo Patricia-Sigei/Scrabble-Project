@@ -10,7 +10,7 @@ const letters = {
 const predefinedLetters = ['C', 'A', 'T', 'H', 'E', 'D', 'R'];
 
 // Function to generate the board inside gameplay container
-function genBoard(container) {
+function genBoard(container) 
     let specialTiles = {
         TW: ["1,1", "1,8", "1,15", "8,1", "8,15", "15,1", "15,8", "15,15"],
         DW: ["2,2", "2,14", "3,3", "3,13", "4,4", "4,12", "5,5", "5,11", "8,8", "11,5", "11,11", "12,4", "12,12", "13,3", "13,13", "14,2", "14,14"],
@@ -228,3 +228,5 @@ initGame();
             content.style.display = content.style.display === "block" ? "none" : "block";
         });
     });
+
+ 
