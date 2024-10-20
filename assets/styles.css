@@ -13,21 +13,6 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
-.racks-container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-    width: 50%;
-}
-
-.rack {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    border: 1px solid lightgray;
-    padding: 10px;
-    background-color: white;
-}
 
 .container {
     display: flex;
