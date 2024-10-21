@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 # Scrabble Project 
 
 ## Overview
@@ -71,4 +69,3 @@ For questions, suggestions, or issues, please reach out to:
 [willisntannpc](https://github.com/willisntannpc) 
 
 Enjoy playing Scrabble!
->>>>>>> Stashed changes
