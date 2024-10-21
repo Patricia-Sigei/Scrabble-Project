@@ -3,76 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrabble Game - Instructions</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <title>Scrabble Game</title>
+    <link rel="stylesheet" href="./assets/styles.css">
 </head>
 <body>
-
-<div class="container">
-    <h1>Scrabble Board Game - Comprehensive Guide</h1>
-    <h2>Overview</h2>
-    <div class="section">
-        <p>Scrabble is a popular word game where players use letter tiles to form words on a 15x15 board. Each letter has a specific point value, and players score points based on the words they create and the bonus squares they cover. The game ends when all tiles are used or no valid moves can be made. The player with the highest score wins.</p>
+    <div id="introduction">
+        <h1>Scrabble Board Game</h1>
+        <h2>Overview</h2>
+        <p>Scrabble is a word game where players use lettered tiles to form words on a 15x15 board. Each letter has a point value, and players earn points based on the words they create. Some tiles on the board offer special bonuses, such as double or triple letter and word scores. Players take turns forming words horizontally or vertically, and the game ends when all tiles are used or no more valid moves can be made. The player with the highest score wins.</p>
     </div>
 
-    <div class="container">
-        <h3>Scrabble Tutorial - Learn by Playing</h3>
-
-        <div id="message" class="message">Welcome to Scrabble! Start by moving a tile from your rack.</div>
-
-        <!-- Scrabble Board -->
-        <div id="board" class="board"></div>
-
-        <div id="gameplayContainer" class="gameplay"></div>
 
 
-    <!-- Game Instructions -->
-    <h2>Game Instructions</h2>
-    <div class="section">
-        <button class="collapsible">1. Game Setup</button>
-        <div class="content">
-            <ol>
-                <li>Each player draws tiles to determine who goes first.</li>
-                <li>Each player starts with 7 letter tiles on their rack.</li>
-                <li>The game board is a 15x15 grid with special bonus squares.</li>
-                <li>Agree on a dictionary to resolve challenges.</li>
-            </ol>
-        </div>
+    <div id="instructions-rules">
+        <h2>Playing the Game</h2>
+        <div class="instructions-container">
+            <section id="instructions">
+                <h3>Instructions</h3>
+                <ol>
+                    <li><strong>Game Setup:</strong> Each player draws tiles to determine who goes first, and everyone starts with seven letter tiles on their rack.</li>
+                    <li><strong>Starting the Game:</strong> The first player must place a word using the center square (marked with a star) on the board. Words must be at least two letters long.</li>
+                    <li><strong>Taking Turns:</strong> Players alternate turns, placing words on the board either horizontally or vertically. Each new word must connect to at least one existing word.</li>
+                    <div id="board">
+                        <h2>Horizontal play</h2>
+                    </div>
+                    <div id="board">
+                        <h2>Vertical Play</h2>
+                    </div>
 
-        <button class="collapsible">2. Starting the Game</button>
-        <div class="content">
-            <p>The first player must place a word using the center square, which is marked with a star. Words must be at least two letters long.</p>
-            <div class="example">
-                Example: If the first player plays the word "CAT", the letter "A" must be on the center star.
-            </div>
-        </div>
+                    <li><strong>Drawing Tiles:</strong> After making a move, players draw new tiles from the bag to replenish their rack to seven tiles.</li>
+                    <li><strong>Scoring:</strong> Each letter has a point value. Players score points based on the letter values of their words and any premium squares they cover.</li>
+                    <li><strong>Challenging Words:</strong> If a player believes a word is invalid, they can challenge it. If the word is found in the dictionary, the challenger loses their turn; if not, the player must remove it and lose their turn.</li>
+                    <li><strong>End of Game:</strong> The game ends when all tiles are drawn and one player uses all their tiles, or no valid moves remain.</li>
+                    <li><strong>Winning:</strong> The player with the highest score at the end of the game wins!</li>
+                </ol>
+            </section>
 
-        <button class="collapsible">3. Taking Turns</button>
-        <div class="content">
-            <p>Players take turns forming words horizontally or vertically. Each word must connect to an existing word.</p>
-            <div class="example">
-                Example: If "CAT" is already on the board, you can add "S" to form "CATS".
-            </div>
-        </div>
 
-        <button class="collapsible">4. Drawing Tiles</button>
-        <div class="content">
-            <p>After each turn, players draw tiles from the tile bag to ensure they have 7 tiles. If no tiles remain, continue playing with the remaining tiles.</p>
-        </div>
-
-        <button class="collapsible">5. Scoring System</button>
-        <div class="content">
-            <p>Players earn points by adding the values of each letter in their word, plus any bonuses from premium squares.</p>
-            <div class="example">
-                Example: If you place "DOG" with "D" on a double-letter score (DL) and "O" on a triple-word score (TW):
+            <section id="rules">
+                <h3>Things to Note</h3>
+                <ol>
+                    <li><strong>First Word Bonus:</strong> When you place the first word, you receive a <strong>Double Word Bonus</strong>, doubling your score for that word. For example, a 10-point word earns you 20 points.</li>
+                    <li><strong>Building Off Existing Words:</strong> To make your word valid, you must build off another player’s word.</li>
+                    <li><strong>Placement Rules:</strong> Words must be spelled in a horizontal row or a vertical column. <strong>Diagonal placements are not allowed.</strong></li>
+                    <li><strong>Drawing New Tiles:</strong> After your turn, draw new tiles to maintain a rack of seven tiles, unless no tiles are left to draw.</li>
+                    <li><strong>Dictionary Agreement:</strong> Agree on a dictionary for resolving challenges. If a word is challenged, consult the agreed-upon dictionary or use the official “Word Checker for Scrabble®” app.</li>
+                    <li><strong>Invalid Words:</strong> Words that are not allowed include:</li>
+                </ol>
                 <ul>
-                    <li>D (2 points) becomes 4 points (double-letter score).</li>
-                    <li>O (1 point), G (2 points), total = 4 + 1 + 2 = 7 points.</li>
-                    <li>The word score is tripled: 7 x 3 = 21 points.</li>
+                    <li><strong>Proper nouns:</strong> Names, places</li>
+                    <li><strong>Abbreviations:</strong> “CIA,” “FBI”</li>
+                    <li><strong>Prefixes or suffixes:</strong> Used alone (e.g., “anti-”)</li>
+                    <li><strong>Hyphenated words:</strong> “short-term”</li>
+                    <li><strong>Incomplete or unofficial words:</strong> “ridic”</li>
                 </ul>
-            </div>
+            </section>
         </div>
+
     </div>
+
+    <div id="score"> 
+        <h2>Score Points</h2>
+        <ol>
+            <li>Scores are automatically calculated when you enter a word.</li>
+            <li>The score of your move is the sum of the letter values in each word formed by your play.</li>
+            <li>Each letter has a specific point value, ranging from 1 to 10 points. For example:</li>
+            <ul>
+                <li>1 point: E, A, I, O, N, R, T, L, S, U</li>
+                <li>2 points: D, G</li>
+                <li>3 points: B, C, M, P</li>
+                <li>4 points: F, H, V, W, Y</li>
+                <li>5 points: K</li>
+                <li>8 points: J, X</li>
+                <li>10 points: Q, Z</li>
+            </ul>
+            <li>The basic score for a word is the sum of the point values of each letter used in the word. Example: If you form the word "CAT": C (3) + A (1) + T (1) = <strong>5 points</strong>.</li>
+            <li>Scrabble boards feature special squares that provide additional scoring:</li>
+            <ul>
+                <li>Double Letter Score (DL): Doubles the point value of the letter placed on it.</li>
+                <li>Triple Letter Score (TL): Triples the point value of the letter placed on it.</li>
+                <li>Double Word Score (DW): Doubles the total score of the word formed.</li>
+                <li>Triple Word Score (TW): Triples the total score of the word formed.</li>
+            </ul>
+            <li>Example of Premium Square Calculation: If "C" (3 points) is placed on a DW square: <strong>Total score = 3 (C) + A (1) + T (1) = 5 points</strong>. Since "C" is on a DW, the total score is: <strong>5 * 2 = 10 points</strong>.</li>
+            <li>If a new word is created by adding letters to existing words on the board, the scores for those new words are also calculated using the same rules, and you get points for each new word formed.</li>
+            <li>If a player uses all seven tiles in one turn, they earn a <strong>50-point bingo bonus</strong>.</li>
+            <li>This scoring system encourages strategic placement of letters and words, making gameplay more dynamic and engaging!</li>
+        </ol>
+    </div>
+
+
+    <script src="./src/script.js"></script>
 
 </body>
 </html>
