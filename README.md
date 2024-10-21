@@ -59,6 +59,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Contact
 For questions, suggestions, or issues, please reach out to:
 - GitHub: 
+
 [Emily-art3](https://github.com/Emily-art3) 
 
 [Patricia-Sigei](https://github.com/Patricia-Sigei) 
