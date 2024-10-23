@@ -3,6 +3,9 @@
 ## Overview
 This Scrabble project is a digital implementation of the classic word game, Scrabble. Players create words on a board using letter tiles, aiming to score the highest number of points by forming words strategically and taking advantage of double and triple letter/word score tiles. 
 
+##Live Link
+https://patricia-sigei.github.io/Scrabble-Project/
+
 ## Features
 - Board & Tile System: The game includes a 15x15 board with letter tiles that can be placed to form words.
 - Scoring System: Each letter has a point value, and special tiles like double and triple word/letter scores increase points.
