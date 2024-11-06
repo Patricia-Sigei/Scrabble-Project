@@ -214,6 +214,51 @@ function removePlayedLettersFromRack(playedLetters) {
         tile.appendChild(valueSpan);
         gameplayContainer.appendChild(tile);
     });
+        // Attach the rack container to the gameplay section
+    gameplayContainer.appendChild(rackContainer);
+}
+
+
+// Function to calculate the score of a word placed on the board, accounting for special tiles (like double/triple score tiles).
+function calculateWordScore(word, startRow, startCol, direction) {
+    let wordScore = 0; // Initialize the word score
+    let wordMultiplier = 1; // Default word multiplier is 1 (no bonus)
+
+    // Loop through each letter in the word to calculate the score
+    for (let i = 0; i < word.length; i++) {
+        // Calculate the current tile position based on the direction (horizontal or vertical)
+        const row = direction === "horizontal" ? startRow : startRow + i;
+        const col = direction === "horizontal" ? startCol + i : startCol;
+        
+        const letter = word[i]; // Get the current letter
+        const letterScore = letters[letter.toUpperCase()] || 0; // Get the letter's point value
+
+        let letterMultiplier = 1; // Default letter multiplier is 1 (no bonus)
+        const tileId = `${row},${col}`;
+
+        // Check if the tile is a special tile and adjust the multiplier accordingly
+        if (specialTiles.TW.includes(tileId)) {
+            wordMultiplier *= 3; // Triple Word Tile
+        } else if (specialTiles.DW.includes(tileId)) {
+            wordMultiplier *= 2; // Double Word Tile
+        } else if (specialTiles.TL.includes(tileId)) {
+            letterMultiplier = 3; // Triple Letter Tile
+        } else if (specialTiles.DL.includes(tileId)) {
+            letterMultiplier = 2; // Double Letter Tile
+        }
+
+        // Add the letter's score adjusted by the multiplier to the word score
+        wordScore += letterScore * letterMultiplier;
+    }
+
+    // Return the final score, considering the word multiplier
+    return wordScore * wordMultiplier;
+}
+
+// Function to update the score display on the page whenever a player makes a move.
+function updateScore(newScore) {
+    const scoreDisplay = document.getElementById("score");
+    scoreDisplay.textContent = `Score: ${newScore}`; // Update the score with the new value
 }
 
 // Initialize the game
@@ -229,7 +274,7 @@ function initGame() {
 // Run the game initialization
 initGame();
 
-    // Collapsible buttons functionality
+// Collapsible buttons functionality
     const collapsibleButtons = document.querySelectorAll(".collapsible");
     collapsibleButtons.forEach(button => {
         button.addEventListener("click", function() {
