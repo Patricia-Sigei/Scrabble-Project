@@ -1,5 +1,5 @@
-        const boardContainer = document.getElementById("board");
-        const gameplayContainer = document.getElementById("gameplay");
+        const boardContainer = document.getElementById("score");
+        // const gameplayContainer = document.getElementById("gameplay");
         const letters = {
             'A': 1, 'B': 3, 'C': 3, 'D': 2, 'E': 1, 'F': 4, 'G': 2, 'H': 4, 'I': 1, 
             'J': 8, 'K': 5, 'L': 1, 'M': 3, 'N': 1, 'O': 1, 'P': 3, 'Q': 10, 'R': 1, 
@@ -29,7 +29,7 @@
                     col.appendChild(tileName);
                     col.id = `${r},${c}`;
                     col.style.width = "40px";
-                    col.style.height = "40px";
+                    col.style.height = "30px";
                     col.style.display = "flex";
                     col.style.border = "1px solid lightgray";
                     col.style.justifyContent = "center";
